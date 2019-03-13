@@ -18,6 +18,7 @@
 		},
 		"scripts": {
 				"test": "jest",
+				"test-watch": "jest --watch",
 				"start": "npm start.js",
 				"dev": "forever -w --watchDirectory ./ ./start.js"
 		},

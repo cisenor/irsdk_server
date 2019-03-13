@@ -16,12 +16,21 @@ let res = {
   send: jest.fn()
 }
 
-let subject = new Live(testData);
+const mockResponse = {
+  rpm: 1400,
+  carLeftRight: []
+}
+const mockIr = {
+  all: jest.fn(()=>mockResponse),
+  on: jest.fn()
+}
+
+let subject = new Live(mockIr, testData);
 
 describe("GET",()=>{
   test("Returns json", ()=>{
     subject.GET(req, res, null)
-    expect(res.json).toHaveBeenCalledWith("Racing")
+    expect(res.json).toHaveBeenCalledWith(mockResponse)
     
   });
   describe("parameters do not ask for json", ()=>{
