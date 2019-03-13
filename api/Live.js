@@ -8,7 +8,7 @@ export class Live {
       response.status(404).end();
       return;
     }
-    response.json(this._sdk['values'][request.params["field"]]);
+    response.json(this._sdk.all());
   }
 
   valid(request){
