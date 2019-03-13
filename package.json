@@ -1,0 +1,42 @@
+{
+		"name": "irsdk_server",
+		"version": "1.0.0",
+		"description": "A Web Server For iRacing's SDK",
+		"main": "start.js",
+		"dependencies": {
+				"@babel/core": "^7.3.4",
+				"@babel/preset-env": "^7.3.4",
+				"babel-jest": "^24.5.0",
+				"babel-preset-env": "^1.7.0",
+				"babel-register": "^6.26.0",
+				"express": "^4.16.4",
+				"moment": "^2.24.0"
+		},
+		"devDependencies": {
+				"jest": "^24.5.0"
+		},
+		"scripts": {
+				"test": "jest",
+				"start": "npm start.js",
+				"dev": "forever -w --watchDirectory ./ ./start.js"
+		},
+		"repository": "git+https://github.com/cisenor/irsdk_server.git",
+		"author": "Craig <craig@stembolt.com>",
+		"license": "ISC",
+		"bugs": {
+				"url": "https://github.com/cisenor/irsdk_server/issues"
+		},
+		"homepage": "https://github.com/cisenor/irsdk_server#readme",
+		"private": false,
+		"jest": {
+				"rootDir": "./",
+				"moduleFileExtensions": [
+						"js",
+						"jsx"
+				],
+				"moduleDirectories": [
+						"node_modules",
+						"<rootDir>"
+				]
+		}
+}
