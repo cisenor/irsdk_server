@@ -5,7 +5,7 @@ import moment from "moment";
 import * as testData from "./spec/fixtures/telemetry.json"
 import IrSDK from "./models/IrSDK";
 import iracing from "node-irsdk";
-const PORT = 3000;
+const PORT = 3028;
 const irParams = {telemetryUpdateInterval: 1000/30};
 iracing.init(irParams);
 const ir = iracing.getInstance();
